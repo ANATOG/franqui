@@ -1,0 +1,9 @@
+[05-Jul-2020 18:41:27 America/Mexico_City] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[05-Jul-2020 18:41:27 America/Mexico_City] PHP Warning:  Module 'SourceGuardian' already loaded in Unknown on line 0
+[05-Jul-2020 18:41:27 America/Mexico_City] PHP Fatal error:  Call to undefined function env() in /home/franquic/public_html/config/app.php on line 28
+[05-Jul-2020 19:11:06 America/Mexico_City] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[05-Jul-2020 19:11:06 America/Mexico_City] PHP Warning:  Module 'SourceGuardian' already loaded in Unknown on line 0
+[05-Jul-2020 19:11:06 America/Mexico_City] PHP Fatal error:  Call to undefined function env() in /home/franquic/public_html/config/app.php on line 28
+[05-Jul-2020 19:12:12 America/Mexico_City] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[05-Jul-2020 19:12:12 America/Mexico_City] PHP Warning:  Module 'SourceGuardian' already loaded in Unknown on line 0
+[05-Jul-2020 19:12:12 America/Mexico_City] PHP Fatal error:  Call to undefined function env() in /home/franquic/public_html/config/app.php on line 28

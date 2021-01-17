@@ -1,0 +1,241 @@
+body,
+html{
+    width: 100%;
+    height: 100%;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: black;
+}
+::-moz-placeholder { /* Firefox 19+ */
+    color: black;
+}
+:-ms-input-placeholder { /* IE 10+ */
+    color: black;
+}
+:-moz-placeholder { /* Firefox 18- */
+    color: black;
+}
+
+.color-blue{
+    background-color: #1f2fff;
+}
+
+/*.color-blue:hover{*/
+    /*background-color: #0000ff;*/
+/*}*/
+
+/*.color-blue:focus{*/
+    /*background-color: #1f2fff;*/
+/*}*/
+
+/*.color-blue-text{*/
+    /*color: #1f2fff;*/
+/*}*/
+
+.center-text{
+    text-align: center;
+}
+
+.center-full{
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+.center-full__container{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.center-horizontal{
+    text-align: center;
+}
+
+.center-horizontal__container{
+    display: inline-block;
+}
+
+header, main, footer {
+    padding-left: 275px;
+}
+
+@media only screen and (max-width: 992px) {
+    header, main, footer {
+        padding-left: 0px;
+    }
+}
+
+.container {
+    width: 90%;
+}
+
+.container .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.search_row .select-wrapper input.select-dropdown {
+    font-size: 12px;
+}
+
+.search_row .dropdown-content li > a, .dropdown-content li > span {
+    font-size: 12px;
+}
+
+.material-icons {
+    color: #263238
+}
+
+.msg-success {
+    color: #4caf50
+}
+
+.msg-error {
+    color: #d32f2f
+}
+
+/* login */
+
+.grey-text.text-darken-3 #login {
+    color: #1b3583 !important;
+}
+
+#login input:not([type]),
+#login input[type=text],
+#login input[type=password],
+#login input[type=email],
+#login input[type=url],
+#login input[type=time],
+#login input[type=date],
+#login input[type=datetime],
+#login input[type=datetime-local],
+#login input[type=tel],
+#login input[type=number],
+#login input[type=search],
+#login textarea.materialize-textarea {
+    border: 1px solid #9e9e9e;
+    padding-left: 1%;
+    color: black;
+    margin: 0;
+}
+
+#login input:not([type]):focus:not([readonly]),
+#login input[type=text]:focus:not([readonly]),
+#login input[type=password]:focus:not([readonly]),
+#login input[type=email]:focus:not([readonly]),
+#login input[type=url]:focus:not([readonly]),
+#login input[type=time]:focus:not([readonly]),
+#login input[type=date]:focus:not([readonly]),
+#login input[type=datetime]:focus:not([readonly]),
+#login input[type=datetime-local]:focus:not([readonly]),
+#login input[type=tel]:focus:not([readonly]),
+#login input[type=number]:focus:not([readonly]),
+#login input[type=search]:focus:not([readonly]),
+#login textarea.materialize-textarea:focus:not([readonly]) {
+    box-shadow: none;
+}
+
+#login input[type="text"]::-webkit-input-placeholder, #login input[type="password"]::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #9e9e9e;
+}
+
+#login input[type="text"]::-moz-placeholder, #login input[type="password"]::-moz-placeholder { /* Firefox 19+ */
+    color: #9e9e9e;
+}
+
+#login input[type="text"]:-ms-input-placehold, #login input[type="password"]:-ms-input-placeholder { /* IE 10+ */
+    color: #9e9e9e;
+}
+
+#login input[type="text"]:-moz-placeholder, #login input[type="password"]:-moz-placeholder { /* Firefox 18- */
+    color: #9e9e9e;
+}
+
+#login .card-action a {
+    color: #1b3583;
+}
+
+#login button.blue-grey.darken-4 {
+    background-color: #1b3583 !important;
+}
+
+/* image cropper */
+#image-cropper {
+    position: relative;
+}
+
+#image-cropper .range-field{
+    margin: 30px 0;
+}
+
+#image-cropper .cropit-image-zoom-input {
+    /* width: 50%; */
+    width: 300px;
+}
+
+#image-cropper.image_top {
+    width: 1024px;    
+}
+
+#image-cropper .safe-zone {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background: black;
+    opacity: .5;
+    z-index: 100;
+    pointer-events: none;
+}
+
+#image-cropper .cropit-preview {
+    border: 1px solid black;
+}
+
+#image-cropper.image_top .cropit-preview {
+    width: 1024px;
+    height: 307px;
+}
+
+
+#image-cropper.image_top .safe-zone {
+    width: 617px;
+    height: 282px;
+}
+
+#image-cropper.left_one,
+#image-cropper.left_two,
+#image-cropper.left_three {
+    width: 690px;    
+}
+
+#image-cropper.left_one .cropit-preview,
+#image-cropper.left_two .cropit-preview,
+#image-cropper.left_three .cropit-preview {
+    width: 690px;
+    height: 330px;
+}
+
+#image-cropper.left_one .safe-zone,
+#image-cropper.left_two .safe-zone,
+#image-cropper.left_three .safe-zone {
+    width: 580px;
+    height: 210px;
+    top: 60px;
+}
+
+#image-cropper.right_one {
+    width: 560px;    
+}
+
+#image-cropper.right_one .cropit-preview {
+    width: 560px;
+    height: 600px;
+}
+
+#image-cropper.right_one .safe-zone {
+    width: 490px;
+    height: 330px;
+    top: 135px;
+}
