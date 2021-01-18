@@ -70,6 +70,7 @@ class SubjectsController extends Controller
     public function getInfo($subject, $order)
     {
         $limit      = 16;
+        $pais= $this->getLocation();
         $franchises = Franchises::ListAllFranchisesFront($order, $subject)->paginate($limit);
         foreach ($franchises as $key => $franchise) {
             $images                    = $this->getImagesForFront($franchise);
