@@ -20,7 +20,7 @@
 
                     @if(!empty($selectedSubject))
 
-                        <p class="top__info__text">Resultados de la busqueda{{$pais}}</p>
+                        <p class="top__info__text">Resultados de la busqueda <h1>{{$pais}}</h1></p>
 
                         <h1 class="top__info__title">{{ $selectedSubject->name }}</h1>
 
