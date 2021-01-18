@@ -370,13 +370,9 @@ class FranchisesController extends BaseAdminController
         $franchise->description_red       = Purify::clean($inputs['description_red']);
         $franchise->description           = Purify::clean($inputs['description']);
         $franchise->country_in            = Purify::clean($inputs['country_in']);
-        if($inputs['countries_show']==null){
-            
-        }
-        else{
-            $franchise->countries_show        = Purify::clean($inputs['countries_show']);    
-        }
-        $franchise->countries_show        = Purify::clean($inputs['countries_show']);
+
+        $franchise->countries_show        = Purify::clean($inputs['countries_show']) ? $otraVariable : '0';
+
         $franchise->grand_open            = Purify::clean($inputs['grand_open']);
         $franchise->franchises_first_open = Purify::clean($inputs['franchises_first_open']);
         $franchise->franchises_local      = Purify::clean($inputs['franchises_local']);
