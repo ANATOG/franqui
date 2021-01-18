@@ -136,8 +136,7 @@
                     
                     <div class="input-field col s12">
 
-                        <select required
-                                title="Seleccione al menos un país"
+                        <select 
                                 class="selectpicker show-menu-arrow" id="countries_show" name="countries_show[]" 
                                 data-style="form-control" 
                                 data-live-search="true" 
@@ -145,7 +144,7 @@
                                 multiple="multiple">
                                 @include('admin.franchises.options')                                                   
                         </select> 
-                        <label for="countries_show" data-error="wrong" data-success="right">Países para ofertar</label>
+                        <label for="countries_show" data-error="wrong" data-success="right">Países para ofertar  (Seleccione al menos uno)</label>
                     </div>
                     
                     
