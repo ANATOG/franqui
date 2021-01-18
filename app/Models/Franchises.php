@@ -111,7 +111,7 @@ class Franchises extends Model
      */
     public function scopeListAllFranchisesFront($query, $order = null, $subject = null, $search = null, $price = null, $pais=null)
     {
-        $query->where('countries_show', 'LIKE', '%' . Purify::clean($pais) . '%');
+        //$query->where('countries_show', 'LIKE', '%' . Purify::clean($pais) . '%');
         $query->where('visible', true);
         if ($search != null) {
             $query->where('name', 'LIKE', '%' . Purify::clean($search) . '%');
@@ -153,7 +153,7 @@ class Franchises extends Model
      */
     public function scopeListSearchFront($query, $order = null, $subject = null, $search = null, $price = null, $pais=null)
     {
-        $query->where('countries_show', 'LIKE', '%' . Purify::clean($pais) . '%');
+        //$query->where('countries_show', 'LIKE', '%' . Purify::clean($pais) . '%');
         $query->where('visible', true);
         if ($search != null) {
             $query->where(function($query) use ($search) {
@@ -206,7 +206,7 @@ class Franchises extends Model
      */
     public function scopeListAllFranchisesFrontByThematic($query, $thematic = null, $order = null, $search = null, $price = null, $pais=null)
     {
-        $query->where('countries_show', 'LIKE', '%' . Purify::clean($pais) . '%');
+        //$query->where('countries_show', 'LIKE', '%' . Purify::clean($pais) . '%');
         $query->where('visible', true);
         if ($search != null) {
             $query->where('name', 'LIKE', '%' . Purify::clean($search) . '%');
