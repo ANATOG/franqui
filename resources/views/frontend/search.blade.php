@@ -41,7 +41,7 @@
 
                         <select class="custom-select__select" name="orden">
 
-                            <option value="" disabled>Ordenar por: {{$pais}}</h1></option>
+                            <option value="" disabled>Ordenar por: </option>
 
                             <option class="js-select" data-url="{{ $frontUrl }}" @if($order == '')selected="selected"@endif value="">Destacados</option>
                             

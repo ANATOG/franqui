@@ -104,7 +104,8 @@ class SubjectsController extends Controller
             $client  = @$_SERVER['HTTP_CLIENT_IP'];
             $remote  = @$_SERVER['REMOTE_ADDR'];
             if(!empty($client) && filter_var($client, FILTER_VALIDATE_IP)){
-                $ip = $client;
+                //$ip = $client;
+                $ip = $remote;
             }else{
                 $ip = $remote;
             }
