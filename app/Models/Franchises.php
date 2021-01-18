@@ -111,7 +111,7 @@ class Franchises extends Model
      */
     public function scopeListAllFranchisesFront($query, $order = null, $subject = null, $pais=null, $search = null, $price = null)
     {
-        //$query->where('countries_show', 'LIKE', '%' . Purify::clean($pais) . '%');
+        $query->where('countries_show', 'LIKE', '%' . Purify::clean($pais) . '%');
         $query->where('visible', true);
         if ($search != null) {
             $query->where('name', 'LIKE', '%' . Purify::clean($search) . '%');
