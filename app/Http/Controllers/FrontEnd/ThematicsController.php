@@ -69,7 +69,8 @@ class ThematicsController extends Controller
     public function getInfo($thematic, $order)
     {
         $limit      = 16;
-        $franchises = Franchises::ListAllFranchisesFrontByThematic($thematic, $order)->paginate($limit);
+        $pais= $this->getLocation();
+        $franchises = Franchises::ListAllFranchisesFrontByThematic($thematic, $order, $pais)->paginate($limit);
         foreach ($franchises as $key => $franchise) {
             $images                    = $this->getImagesForFront($franchise);
             $franchises[$key]['image'] = $images['right_one'];
@@ -96,6 +97,34 @@ class ThematicsController extends Controller
             $result[$image['position']] = $image['image'];
         }
         return $result;
+    }
+
+    public function getLocation(){
+        if (empty($ip_address)) {
+            $client  = @$_SERVER['HTTP_CLIENT_IP'];
+            $forward = @$_SERVER['HTTP_X_FORWARDED_FOR'];
+            $server  = @$_SERVER['SERVER_ADDR'];
+            $remote  = @$_SERVER['REMOTE_ADDR'];
+            if(!empty($client) && filter_var($client, FILTER_VALIDATE_IP)){
+                $ip = $client;
+            }elseif(!empty($forward) && filter_var($forward, FILTER_VALIDATE_IP)){
+                $ip = $forward;
+            }elseif(!empty($server) && filter_var($server, FILTER_VALIDATE_IP)){
+                $ip = $server;   
+            }else{
+                $ip = $remote;
+            }
+        } else {
+            $ip = "$ip_address";
+        }
+        
+        $ip_data = unserialize(file_get_contents("http://www.geoplugin.net/php.gp?ip=".$ip));
+        $location  = "null";
+    
+        if($ip_data && $ip_data['geoplugin_countryCode'] != null){
+            $location = $ip_data['geoplugin_countryCode'];
+        }
+        return $location;
     }
 
 }
