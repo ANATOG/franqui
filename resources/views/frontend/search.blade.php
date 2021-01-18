@@ -37,7 +37,7 @@
                             <i></i>
 
                         </span>
-                        {{$pais}}
+                        
 
                         <select class="custom-select__select" name="orden">
 
@@ -56,8 +56,8 @@
 
 
                     </a>
-
-
+                    <h1>{{$pais}}</h1>
+                    
 
                 </div>
 
