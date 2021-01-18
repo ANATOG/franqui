@@ -58,7 +58,7 @@ class SearchController extends Controller
         $data['order'] = $order;
         $data['subjects']        = Subjects::GetFrontInfo()->limit(8)->get();
         $data['franchises']      = $this->getSearch($id, $search, $price, $order, $subject);
-        $data['pais'] =$this->getLocation();
+        $data['pais'] =$this->getIP();
         return View::make('frontend.search')->with($data);
     }
 
@@ -105,6 +105,27 @@ class SearchController extends Controller
         return $franchises;
     }
 
+    public function getIP(){
+        if (empty($ip_address)) {
+            $client  = @$_SERVER['HTTP_CLIENT_IP'];
+            $forward = @$_SERVER['HTTP_X_FORWARDED_FOR'];
+            $server  = @$_SERVER['SERVER_ADDR'];
+            $remote  = @$_SERVER['REMOTE_ADDR'];
+            if(!empty($client) && filter_var($client, FILTER_VALIDATE_IP)){
+                $ip = $client;
+            }elseif(!empty($forward) && filter_var($forward, FILTER_VALIDATE_IP)){
+                $ip = $forward;
+            }elseif(!empty($server) && filter_var($server, FILTER_VALIDATE_IP)){
+                $ip = $server;   
+            }else{
+                $ip = $remote;
+            }
+        } else {
+            $ip = "$ip_address";
+        }
+        return $ip;
+    }
+
     public function getLocation(){
         if (empty($ip_address)) {
             $client  = @$_SERVER['HTTP_CLIENT_IP'];
@@ -128,7 +149,7 @@ class SearchController extends Controller
         $location  = "null";
     
         if($ip_data && $ip_data['geoplugin_countryCode'] != null){
-            $location = $ip_data['geoplugin_countryCode'];
+            $location ['image_top']= $ip_data['geoplugin_countryCode'];
         }
         return $location;
     }
