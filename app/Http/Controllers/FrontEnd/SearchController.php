@@ -129,7 +129,7 @@ class SearchController extends Controller
 
     public function getLocation(){
 
-        $ip=getIP();        
+        $ip=$this->getIP();        
         $ip_data = unserialize(file_get_contents("http://www.geoplugin.net/php.gp?ip=".$ip));
         $location  = "null";
     
