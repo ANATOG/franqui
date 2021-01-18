@@ -18,17 +18,19 @@
 
                     @if(!empty($selectedSubject))
 
-                        <p class="top__info__text">Resultados de la busqueda</p>
+                        <p class="top__info__text">Resultados de la busqueda </p>
 
                         <h1 class="top__info__title">{{ $selectedSubject->name }}</h1>
 
                     @endif
-
+                    
                     <a href="#" class="results__order || custom-select">
 
                         <p class="custom-select__text">
 
-                            Ordenar por
+                            Ordenar por @php
+                            echo "hola";
+                        @endphp
 
                         </p>
 

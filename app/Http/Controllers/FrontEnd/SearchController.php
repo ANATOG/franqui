@@ -58,6 +58,7 @@ class SearchController extends Controller
         $data['order'] = $order;
         $data['subjects']        = Subjects::GetFrontInfo()->limit(8)->get();
         $data['franchises']      = $this->getSearch($id, $search, $price, $order, $subject);
+        $data['pais'] =$this->getLocation();
         return View::make('frontend.search')->with($data);
     }
 
