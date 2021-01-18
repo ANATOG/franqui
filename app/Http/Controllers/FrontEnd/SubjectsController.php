@@ -58,6 +58,7 @@ class SubjectsController extends Controller
         $data['selectedSubject'] = $subject[0];
         $data['subjects']        = Subjects::GetFrontInfo()->limit(8)->get();
         $data['franchises']      = $this->getInfo($subject[0]->id, $order);
+        $data['pais'] =$this->getLocation();
         return View::make('frontend.subjects_item')->with($data);
     }
 
@@ -69,7 +70,8 @@ class SubjectsController extends Controller
     public function getInfo($subject, $order)
     {
         $limit      = 16;
-        $franchises = Franchises::ListAllFranchisesFront($order, $subject)->paginate($limit);
+        $pais= $this->getLocation();
+        $franchises = Franchises::ListAllFranchisesFront($order, $subject,$pais)->paginate($limit);
         foreach ($franchises as $key => $franchise) {
             $images                    = $this->getImagesForFront($franchise);
             $franchises[$key]['image'] = $images['right_one'];

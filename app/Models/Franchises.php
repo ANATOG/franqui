@@ -69,7 +69,7 @@ class Franchises extends Model
      * @param $order
      * @param $orderBy
      * @param null $subject
-     * @return
+     * @return 
      */
     public function scopeListAllFranchises($query, $search = null, $order, $orderBy, $subject = null)
     {
