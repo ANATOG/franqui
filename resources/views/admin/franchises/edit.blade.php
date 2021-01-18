@@ -132,7 +132,7 @@
                     </div>
                     
                     <div class="input-field col s12">
-                        <select class="selectpicker show-menu-arrow" id="countries_show" name="countries_show[]" 
+                        <select required class="selectpicker show-menu-arrow" id="countries_show" name="countries_show[]" 
                                 data-style="form-control" 
                                 data-live-search="true" 
                                 title="-- Seleccionar los países donde ofrecera franquicias --"
