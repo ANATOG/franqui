@@ -125,7 +125,7 @@ class SearchController extends Controller
         }
         
         $ip_data = unserialize(file_get_contents("http://www.geoplugin.net/php.gp?ip=".$ip));
-        $location  = "";
+        $location  = "null";
     
         if($ip_data && $ip_data['geoplugin_countryCode'] != null){
             $location = $ip_data['geoplugin_countryCode'];

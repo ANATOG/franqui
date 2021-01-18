@@ -28,9 +28,7 @@
 
                         <p class="custom-select__text">
 
-                            Ordenar por @php
-                            echo "hola";
-                        @endphp
+                            Ordenar por 
 
                         </p>
 
@@ -39,8 +37,7 @@
                             <i></i>
 
                         </span>
-
-
+                        {{$pais}}
 
                         <select class="custom-select__select" name="orden">
 
