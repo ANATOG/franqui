@@ -71,7 +71,7 @@ class SubjectsController extends Controller
     {
         $limit      = 16;
         $pais= $this->getLocation();
-        $franchises = Franchises::ListAllFranchisesFront($order, $subject)->paginate($limit);
+        $franchises = Franchises::ListAllFranchisesFront($order, $subject, $pais)->paginate($limit);
         foreach ($franchises as $key => $franchise) {
             $images                    = $this->getImagesForFront($franchise);
             $franchises[$key]['image'] = $images['right_one'];

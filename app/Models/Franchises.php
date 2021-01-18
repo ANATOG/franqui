@@ -69,7 +69,7 @@ class Franchises extends Model
      * @param $order
      * @param $orderBy
      * @param null $subject
-     * @return 
+     * @return
      */
     public function scopeListAllFranchises($query, $search = null, $order, $orderBy, $subject = null)
     {
@@ -109,7 +109,7 @@ class Franchises extends Model
      * @param null $pais
      * @return
      */
-    public function scopeListAllFranchisesFront($query, $order = null, $subject = null, $search = null, $price = null, $pais=null)
+    public function scopeListAllFranchisesFront($query, $order = null, $subject = null, $pais=null, $search = null, $price = null)
     {
         //$query->where('countries_show', 'LIKE', '%' . Purify::clean($pais) . '%');
         $query->where('visible', true);
@@ -153,7 +153,7 @@ class Franchises extends Model
      */
     public function scopeListSearchFront($query, $order = null, $subject = null, $search = null, $price = null, $pais=null)
     {
-        //$query->where('countries_show', 'LIKE', '%' . Purify::clean($pais) . '%');
+        $query->where('countries_show', 'LIKE', '%' . Purify::clean($pais) . '%');
         $query->where('visible', true);
         if ($search != null) {
             $query->where(function($query) use ($search) {
@@ -201,12 +201,10 @@ class Franchises extends Model
      * @param null $order
      * @param null $search
      * @param null $price
-     **@param null $pais
      * @return
      */
-    public function scopeListAllFranchisesFrontByThematic($query, $thematic = null, $order = null, $search = null, $price = null, $pais=null)
+    public function scopeListAllFranchisesFrontByThematic($query, $thematic = null, $order = null, $search = null, $price = null)
     {
-        //$query->where('countries_show', 'LIKE', '%' . Purify::clean($pais) . '%');
         $query->where('visible', true);
         if ($search != null) {
             $query->where('name', 'LIKE', '%' . Purify::clean($search) . '%');
