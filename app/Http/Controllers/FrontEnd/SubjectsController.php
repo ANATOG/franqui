@@ -104,7 +104,7 @@ class SubjectsController extends Controller
            // $client  = @$_SERVER['HTTP_CLIENT_IP'];
            // $forward = @$_SERVER['HTTP_X_FORWARDED_FOR'];
            // $server  = @$_SERVER['SERVER_ADDR'];
-            $remote  = $_SERVER['REMOTE_ADDR'];
+           // $remote  = $_SERVER['REMOTE_ADDR'];
             //if(!empty($client) && filter_var($client, FILTER_VALIDATE_IP)){
               //  $ip = $client;
             //}//elseif(!empty($forward) && filter_var($forward, FILTER_VALIDATE_IP)){
@@ -114,11 +114,12 @@ class SubjectsController extends Controller
                 //$ip = $server;   
            // }
             //else{
-                $ip = $remote;
+                //$ip = $remote;
            // }
        // } else {
             //$ip = "$ip_address";
         //}
+        $ip = request()->ip()
         return $ip;
     }
     
