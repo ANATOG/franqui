@@ -121,7 +121,7 @@ class SearchController extends Controller
            // }
            // else{
                 //$ip = $remote;
-                $ip = Request::ip();
+                $ip = Request::getClientIp(true);
            // }
        // } else {
             //$ip = "$ip_address";
