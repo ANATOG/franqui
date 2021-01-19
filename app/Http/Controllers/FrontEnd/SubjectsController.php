@@ -99,7 +99,7 @@ class SubjectsController extends Controller
         }
         return $result;
     }
-    
+
     public function getIP(){
         if (empty($ip_address)) {
            /*$client  = @$_SERVER['HTTP_CLIENT_IP'];
@@ -117,7 +117,7 @@ class SubjectsController extends Controller
                $ip = $remote;
             }*/
         }else {
-            $ip = "$ip_address";
+            //$ip = "$ip_address";
         }
         $ip = $remote;
         return $ip;
