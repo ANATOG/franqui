@@ -106,26 +106,25 @@ class SearchController extends Controller
     }
 
     public function getIP(){
-        //if (empty($ip_address)) {
-           // $client  = @$_SERVER['HTTP_CLIENT_IP'];
-            //$forward = @$_SERVER['HTTP_X_FORWARDED_FOR'];
-            //$server  = @$_SERVER['SERVER_ADDR'];
-            $remote  = @$_SERVER['REMOTE_ADDR'];
-           // if(!empty($client) && filter_var($client, FILTER_VALIDATE_IP)){
-            //    $ip = $client;
-           // }//elseif(!empty($forward) && filter_var($forward, FILTER_VALIDATE_IP)){
-                //$ip = $forward;
-            //}
-            //elseif(!empty($server) && filter_var($server, FILTER_VALIDATE_IP)){
-                //$ip = $server;   
-           // }
-           // else{
+        if (empty($ip_address)) {
+           $client  = @$_SERVER['HTTP_CLIENT_IP'];
+           $forward = @$_SERVER['HTTP_X_FORWARDED_FOR'];
+           $server  = @$_SERVER['SERVER_ADDR'];
+           $remote  = @$_SERVER['REMOTE_ADDR'];
+            if(!empty($client) && filter_var($client, FILTER_VALIDATE_IP)){
+                $ip = $client;
+            }elseif(!empty($forward) && filter_var($forward, FILTER_VALIDATE_IP)){
+                $ip = $forward;
+            }elseif(!empty($server) && filter_var($server, FILTER_VALIDATE_IP)){
+                $ip = $server;   
+            }
+            else{
                $ip = $remote;
-           // }
-       // } else {
-            //$ip = "$ip_address";
-        //}
-       // $ip = \Request::getClientIp(true);
+            }
+        }else {
+            $ip = "$ip_address";
+        }
+       // $ip = $remote;
         return $ip;
     }
     
@@ -134,7 +133,7 @@ class SearchController extends Controller
 
         $ip=$this->getIP();        
         $ip_data = unserialize(file_get_contents("http://www.geoplugin.net/php.gp?ip=".$ip));
-        $location  = "null";
+        //$location  = "null";
     
         if($ip_data && $ip_data['geoplugin_countryCode'] != null){
             $location = $ip_data['geoplugin_countryCode'];
