@@ -119,7 +119,7 @@ class SubjectsController extends Controller
        // } else {
             //$ip = "$ip_address";
         //}
-        $ip = request()->ip()
+        $ip = request()->ip();
         return $ip;
     }
     
