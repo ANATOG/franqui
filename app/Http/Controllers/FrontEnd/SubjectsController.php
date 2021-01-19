@@ -99,7 +99,7 @@ class SubjectsController extends Controller
         }
         return $result;
     }
-    public function getIP(){
+    public function getIP(Request $request){
         //if (empty($ip_address)) {
            // $client  = @$_SERVER['HTTP_CLIENT_IP'];
            // $forward = @$_SERVER['HTTP_X_FORWARDED_FOR'];
