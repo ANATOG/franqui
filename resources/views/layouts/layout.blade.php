@@ -854,7 +854,14 @@
 
                           </li>
 
-
+                        @if(Session::has('message'))
+                            <div class="alert {{ Session::get('alert-class', 'alert-info') }} " role="alert">
+                                <strong>{{ Session::get('message') }}</strong>
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                        @endif
 
                           <li class="footer__small-nav__item">
 
