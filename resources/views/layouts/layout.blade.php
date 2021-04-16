@@ -854,8 +854,8 @@
 
                           </li>
                           hola
-                        @if(session("mensaje")
-                            <div class="alert {{session('mensaje')}} " role="alert">
+                          @if(session("mensaje") && session("alert-class"))
+                            <div class="alert {{session('tipo')}} " role="alert">
                                 <strong>{{session('mensaje')}}</strong>
                                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
