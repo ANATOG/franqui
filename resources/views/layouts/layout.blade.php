@@ -934,11 +934,11 @@
 
 
 
-        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
 
 
 
-        <!--<script type="text/javascript">
+        <script type="text/javascript">
 
             var widId = "";
 
@@ -948,7 +948,7 @@
 
                 widId = grecaptcha.render('recapchaWidget', {
 
-                    'sitekey':'6LcWqawaAAAAAA1Mk3VwhbYMlRy6yDLyYtuJ8dXN'
+                    'sitekey':'6Lf3gRgUAAAAAPO5rZ_InudgcxY51H67jNWM4g48'
 
                 });
 
@@ -978,7 +978,7 @@
 
             }
 
-        </script>-->
+        </script>
 
 
 
