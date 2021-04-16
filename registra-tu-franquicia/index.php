@@ -1077,7 +1077,7 @@ TU MARCA</p>
 
             <div class="wrapper">
               <h2 class="contact-title">¿QUERÉS MÁS INFORMACIÓN?</h2>
-              <h3 class="contact-subtitle">LLAMANOS O ESCRIBINOS!</h3>
+              <h3 class="contact-subtitle">LLAMANOS O ESCRIBINOSsss!</h3>
                 <div class="contact">
                   <div class="holder">
                     <div class="contact-element">

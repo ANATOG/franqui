@@ -934,11 +934,11 @@
 
 
 
-        <script src="https://www.google.com/recaptcha/api.js" ></script>
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 
 
-        <script type="text/javascript">
+        <!--<script type="text/javascript">
 
             var widId = "";
 
@@ -978,7 +978,7 @@
 
             }
 
-        </script>
+        </script>-->
 
 
 
