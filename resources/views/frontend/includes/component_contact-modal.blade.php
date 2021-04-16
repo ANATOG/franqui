@@ -105,7 +105,7 @@
 							</div>
 
 							<div class="bottom__right">
-								<div class="contact-info__captcha g-recaptcha" id="recapchaWidget">
+								<div class="contact-info__captcha g-recaptcha" data-sitekey="6Lc7t6waAAAAANVnmjqr5BT7I8x5FZqQjyxPHvVU" id="recapchaWidget">
 								</div>
 
 	                            <button class="form__button form__button--send" type="submit">
