@@ -854,9 +854,9 @@
 
                           </li>
                           hola
-                        @if(Session::has('message'))
-                            <div class="alert {{ Session::get('alert-class', 'alert-info') }} " role="alert">
-                                <strong>{{ Session::get('message') }}</strong>
+                        @if(session("mensaje")
+                            <div class="alert {{session('mensaje')}} " role="alert">
+                                <strong>{{session('mensaje')}}</strong>
                                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
