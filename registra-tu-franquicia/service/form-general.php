@@ -110,7 +110,7 @@
 
 	// ENVIO DE MAIL DE NOTIFICACION
 
-		$to = 'franquiciar@franquiciar.com.ar';
+		$to = 'anitatorrez1924@gmail.com';
 		$subject = "Formulario ";
 
 		$headers = "From: FRANQUICIAR <" . strip_tags("contacto@franquiciar.com.ar") . ">\r\n";
