@@ -853,7 +853,7 @@
                               </a>
 
                           </li>
-
+                          hola
                         @if(Session::has('message'))
                             <div class="alert {{ Session::get('alert-class', 'alert-info') }} " role="alert">
                                 <strong>{{ Session::get('message') }}</strong>

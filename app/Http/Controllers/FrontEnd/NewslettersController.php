@@ -31,13 +31,13 @@ class NewslettersController extends Controller
 
             if ($this->storeNewsletter($inputs)) {
                 $response['data'] = ['status' => true];
-                \Session::flash('message', 'Suscripción realizada con éxito.'); 
-                \Session::flash('alert-class', 'alert-success');
-                return response()->json($response);
+                //\Session::flash('message', 'Suscripción realizada con éxito.'); 
+                //\Session::flash('alert-class', 'alert-success');
+                return response()->json($response)->with("mensaje", $mensaje);
             } else {
                 $response['data'] = ['status' => false, 'message' => 'create_error'];
                 \Session::flash('message', 'Algo salio mal.'); 
-                \Session::flash('alert-class', 'alert');
+                \Session::flash('alert-class', 'alert-warning');
                 return response()->json($response);
             }
 
