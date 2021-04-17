@@ -3917,7 +3917,7 @@
                     },
                     error: function(t) {
                         mensaje.innerHTML = '<div class="alert alert-danger" role="alert">	ha ocurrido un error!</div>';
-                        setTimeout(function() { mensaje.innerHTML = "" }, 50000);
+                        setTimeout(function() { mensaje.innerHTML = "" }, 20000);
                         s.to(e._spinner, .5, { opacity: 0 })
                     }
                 }))
