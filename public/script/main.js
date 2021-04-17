@@ -3902,7 +3902,7 @@
                     context: this._form,
                     url: config.url + "addNewsletter",
                     success: function(t) {
-                        mensaje.innerHTML = '<div class="alert alert-light" role="alert">Suscripción realizada con éxito!</div>';
+                        mensaje.innerHTML = '<div class="alert alert-secondary" role="alert">Suscripción realizada con éxito!</div>';
                         document.getElementById('suscripcion').style.display = 'block';
                         var body = document.getElementsByTagName("body")[0];
                         body.style.position = "static";
