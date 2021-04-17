@@ -911,8 +911,8 @@
 
                         document.getElementById('sus').onclick = function(){
                             prompt('Hello world');
-                        }
-                        $('#idBoton').on('click', function(e){
+                        };
+                        /*$('#idBoton').on('click', function(e){
                             e.preventDefault();
                             var request = $.ajax({
                                     url: "{{ route('ruta') }}",
@@ -925,7 +925,7 @@
                             // si ocurrió un error en el controlador imprimir la excepcion para depurarla
                             request.fail(function(jqXHR, textStatus, errorThrown){
                                 console.log(jqXHR.responseText);// por ejemplo aquí se muestra la excepcion completa como si se tratará de una vista html
-                        );
+                        );*/
                     </script>
                 </div>
 
