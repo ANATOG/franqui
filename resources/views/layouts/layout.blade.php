@@ -892,7 +892,7 @@
 
                                <i class="spinner">
 
-                                    <div class="spinner__wrapper"><div id="mensaje"></div></div>
+                                    <div class="spinner__wrapper"></div>
 
                                 </i>
 
@@ -903,7 +903,7 @@
                             </div>
 
                         </form>
-                        <div id="mensaje"></div>
+                        <div class="footer__newsletter__title" id="mensaje"></div>
 
                     </div>
                 </div>
