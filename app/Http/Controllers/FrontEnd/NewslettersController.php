@@ -33,13 +33,11 @@ class NewslettersController extends Controller
                 $response['data'] = ['status' => true];
                 //\Session::flash('message', 'Suscripción realizada con éxito.'); 
                 //\Session::flash('alert-class', 'alert-success');
-                return response()->json($response)->with('mensaje', 'Suscripción realizada con éxito.')->with('alert-class', 'alert-success');
+                return response()->json($response)->withFlashMessage('Suscripción realizada con éxito.');
 
             } else {
                 $response['data'] = ['status' => false, 'message' => 'create_error'];
-                \Session::flash('message', 'Algo salio mal.'); 
-                \Session::flash('alert-class', 'alert-warning');
-                return response()->json($response);
+                return response()->json($response)->withFlashMessage('Suscripción realizada con éxito.');
             }
 
         }
