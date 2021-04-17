@@ -904,7 +904,16 @@
 
                         </form>
                     </div>
-                    <div class="footer__newsletter__title" id="mensaje"></div>
+                    <div class="modal modalContainer" id="suscripcion">
+                        <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <div class="footer__newsletter__title" id="mensaje"></div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    
                 </div>
 
             </footer>
@@ -972,6 +981,13 @@
             }
 
         </script>
+
+        <style type="text/css">
+            .modalContainer { 
+                background-color: rgb(0,0,0);
+                background-color: rgba(0,0,0,0.4);
+            }
+        </style>
 
 
 

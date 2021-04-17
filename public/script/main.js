@@ -3902,12 +3902,22 @@
                     context: this._form,
                     url: config.url + "addNewsletter",
                     success: function(t) {
-                        alert('La suscripción se ha realizado con éxito'),
-                            mensaje.innerHTML = '<div class="alert alert-success" role="alert">	Mensaje enviado con éxito!</div>';
-                        setTimeout(function() { mensaje.innerHTML = "" }, 10500);
+                        document.getElementById('suscripcion').style.display = 'none';
+                        mensaje.innerHTML = '<div class="alert alert-success" role="alert">	Suscripción realizada con éxito!</div>';
+                        setTimeout(function() {
+                            document.getElementById('suscripcion').style.display = 'block';
+                            var body = document.getElementsByTagName("body")[0];
+                            body.style.position = "static";
+                            body.style.height = "100%";
+                            body.style.overflow = "hidden";
+                        }, 50000);
                         s.to(e._spinner, .5, { opacity: 0 })
                     },
-                    error: function(t) { alert('La suscripción se ha realizado con éxito'), s.to(e._spinner, .5, { opacity: 0 }) }
+                    error: function(t) {
+                        mensaje.innerHTML = '<div class="alert alert-danger" role="alert">	ha ocurrido un error!</div>';
+                        setTimeout(function() { mensaje.innerHTML = "" }, 50000);
+                        s.to(e._spinner, .5, { opacity: 0 })
+                    }
                 }))
             }
         }, { key: "_addEventsListeners", value: function() { this._inputEmail.addEventListener("keyup", this._eventIfValid), this._button.addEventListener("click", this._eventSendInfo) } }]), t
