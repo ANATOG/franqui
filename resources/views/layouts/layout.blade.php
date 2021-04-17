@@ -853,7 +853,7 @@
                               </a>
 
                           </li>
-
+                         
                           <li class="footer__small-nav__item">
 
                               <a href="https://www.youtube.com/channel/UCyPAnRu-RzGB6b03hEJk_Aw" target="_blank" class="icon__social icon__social--youtube">
@@ -904,21 +904,14 @@
                             </div>
 
                         </form>
-                        @if (Session::has('flash_message'))
-                        {{ Session::get('flash_message') }}
+                        @if(Session::has('message'))
+                            <div class="alert {{ Session::get('alert-class', 'alert-info') }} " role="alert">
+                                <strong>{{ Session::get('message') }}</strong>
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
                         @endif
-                        
-                        hola
-
-                        @if(session("mensaje") && session("alert-class"))
-                          <div class="alert {{session('tipo')}} " role="alert">
-                              <strong>{{session('mensaje')}}</strong>
-                              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                  <span aria-hidden="true">&times;</span>
-                              </button>
-                          </div>
-                      @endif
-
                     </div>
 
 
