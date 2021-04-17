@@ -906,11 +906,7 @@
                     </div>
                     <div class="modal modalContainer" id="suscripcion">
                         <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-body">
                                 <div class="footer__newsletter__title" id="mensaje"></div>
-                            </div>
-                        </div>
                         </div>
                     </div>
                     
@@ -920,7 +916,7 @@
             <script>
                 var modal = document.getElementById('suscripcion');
                 modal.onclick = function(){
-                    document.getElementById('myModal').style.display = 'none';
+                    document.getElementById('suscripcion').style.display = 'none';
                 }
             </script>
 
