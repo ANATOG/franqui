@@ -3902,7 +3902,7 @@
                     context: this._form,
                     url: config.url + "addNewsletter",
                     success: function(t) {
-                        mensaje.innerHTML = '<div class="alert alert-success" role="alert">	Suscripción realizada con éxito!</div>';
+                        mensaje.innerHTML = '<div class="alert alert-light" role="alert">Suscripción realizada con éxito!</div>';
                         document.getElementById('suscripcion').style.display = 'block';
                         var body = document.getElementsByTagName("body")[0];
                         body.style.position = "static";
@@ -3912,12 +3912,21 @@
                             document.getElementById('suscripcion').style.display = 'none';
                             document.getElementsByTagName('body')[0].style.opacity = '100';
 
-                        }, 50000);
+                        }, 3000);
                         s.to(e._spinner, .5, { opacity: 0 })
                     },
                     error: function(t) {
-                        mensaje.innerHTML = '<div class="alert alert-danger" role="alert">	ha ocurrido un error!</div>';
-                        setTimeout(function() { mensaje.innerHTML = "" }, 20000);
+                        mensaje.innerHTML = '<div class="alert alert-danger" role="alert">	Ha ocurrido un error!</div>';
+                        document.getElementById('suscripcion').style.display = 'block';
+                        var body = document.getElementsByTagName("body")[0];
+                        body.style.position = "static";
+                        body.style.height = "100%";
+                        body.style.overflow = "hidden";
+                        setTimeout(function() {
+                            document.getElementById('suscripcion').style.display = 'none';
+                            document.getElementsByTagName('body')[0].style.opacity = '100';
+
+                        }, 3000);
                         s.to(e._spinner, .5, { opacity: 0 })
                     }
                 }))
