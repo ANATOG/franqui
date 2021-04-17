@@ -3892,9 +3892,23 @@
             key: "_sendInfo",
             value: function(t) {
                 var e = this;
+                const mensaje = document.getElementById("mensaje");
                 t.preventDefault();
                 var i = this._validateEmail(this._inputEmail.value);
-                return !!i && (s.to(this._spinner, .5, { opacity: 1 }), void o.ajax({ method: "POST", data: o(this._form).serialize(), dataType: "json", context: this._form, url: config.url + "addNewsletter", success: function(t) { alert('bien hecho'), s.to(e._spinner, .5, { opacity: 0 }) }, error: function(t) { s.to(e._spinner, .5, { opacity: 0 }) } }))
+                return !!i && (s.to(this._spinner, .5, { opacity: 1 }), void o.ajax({
+                    method: "POST",
+                    data: o(this._form).serialize(),
+                    dataType: "json",
+                    context: this._form,
+                    url: config.url + "addNewsletter",
+                    success: function(t) {
+                        alert('La suscripción se ha realizado con éxito'),
+                            mensaje.innerHTML = '<div class="alert alert-success" role="alert">	Mensaje enviado con éxito!</div>';
+                        setTimeout(function() { mensaje.innerHTML = "" }, 2500);
+                        s.to(e._spinner, .5, { opacity: 0 })
+                    },
+                    error: function(t) { alert('La suscripción se ha realizado con éxito'), s.to(e._spinner, .5, { opacity: 0 }) }
+                }))
             }
         }, { key: "_addEventsListeners", value: function() { this._inputEmail.addEventListener("keyup", this._eventIfValid), this._button.addEventListener("click", this._eventSendInfo) } }]), t
     }();

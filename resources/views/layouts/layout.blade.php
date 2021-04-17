@@ -875,8 +875,7 @@
 
                     </div>
 
-
-
+                    
                     <div class="footer__wrapper footer__wrapper__right">
 
                         <form class="footer__newsletter || newsletter__form" method="post" action="{{ Config::get('app.url') }}addNewsletter">
@@ -904,6 +903,8 @@
                             </div>
 
                         </form>
+                        <div id="mensaje"></div>
+
                     </div>
                 </div>
 
