@@ -892,7 +892,7 @@
 
                                <i class="spinner">
 
-                                    <div class="spinner__wrapper"></div>
+                                    <div class="spinner__wrapper"><div id="mensaje"></div></div>
 
                                 </i>
 
