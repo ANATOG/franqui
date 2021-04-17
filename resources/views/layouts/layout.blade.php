@@ -917,7 +917,12 @@
                 </div>
 
             </footer>
-
+            <script>
+                var modal = document.getElementById('suscripcion');
+                modal.onclick = function(){
+                    document.getElementById('myModal').style.display = 'none';
+                }
+            </script>
 
 
         </div>

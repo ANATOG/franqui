@@ -3902,14 +3902,15 @@
                     context: this._form,
                     url: config.url + "addNewsletter",
                     success: function(t) {
-                        document.getElementById('suscripcion').style.display = 'none';
                         mensaje.innerHTML = '<div class="alert alert-success" role="alert">	Suscripción realizada con éxito!</div>';
+                        document.getElementById('suscripcion').style.display = 'block';
+                        var body = document.getElementsByTagName("body")[0];
+                        body.style.position = "static";
+                        body.style.height = "100%";
+                        body.style.overflow = "hidden";
                         setTimeout(function() {
-                            document.getElementById('suscripcion').style.display = 'block';
-                            var body = document.getElementsByTagName("body")[0];
-                            body.style.position = "static";
-                            body.style.height = "100%";
-                            body.style.overflow = "hidden";
+                            document.getElementById('suscripcion').style.display = 'none';
+                            document.getElementsByTagName('body')[0].style.opacity = '100';
                         }, 50000);
                         s.to(e._spinner, .5, { opacity: 0 })
                     },
