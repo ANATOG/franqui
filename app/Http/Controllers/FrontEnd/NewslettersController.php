@@ -31,12 +31,10 @@ class NewslettersController extends Controller
 
             if ($this->storeNewsletter($inputs)) {
                 $response['data'] = ['status' => true];
-                $req->session()->flash('data', 'Exito');
                 return response()->json($response);
 
             } else {
                 $response['data'] = ['status' => false, 'message' => 'create_error'];
-                $req->session()->flash('data', 'Error');
                 return response()->json($response);
             }
 

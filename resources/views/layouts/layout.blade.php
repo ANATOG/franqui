@@ -899,23 +899,34 @@
 
                                 <input class="footer__newsletter__input || newsletter__input"  name="email" type="e-mail" placeholder="Ingresá tu email">
 
-                                <button class="footer__newsletter__button || newsletter__btn" type="submit">Enviar</button>
+                                <button id="sus" class="footer__newsletter__button || newsletter__btn" type="submit">Enviar</button>
 
                             </div>
 
                         </form>
-                        <div class="footer__newsletter__form" action="">
-                                <div class="alert  " role="alert">
-                                    <strong>{{ Session::get('data') }}</strong>
-                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                        </div>
                     </div>
 
 
+                    <script>
 
+                        document.getElementById('sus').onclick = function(){
+                            prompt('Hello world');
+                        }
+                        $('#idBoton').on('click', function(e){
+                            e.preventDefault();
+                            var request = $.ajax({
+                                    url: "{{ route('ruta') }}",
+                                    type: 'POST',
+                                    // otras parametros
+                                });
+                            request.done(function(response){
+                                console.log(response.message);//imprime en consola el resultado
+                            };
+                            // si ocurrió un error en el controlador imprimir la excepcion para depurarla
+                            request.fail(function(jqXHR, textStatus, errorThrown){
+                                console.log(jqXHR.responseText);// por ejemplo aquí se muestra la excepcion completa como si se tratará de una vista html
+                        );
+                    </script>
                 </div>
 
             </footer>
