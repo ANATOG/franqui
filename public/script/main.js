@@ -3904,7 +3904,7 @@
                     success: function(t) {
                         alert('La suscripción se ha realizado con éxito'),
                             mensaje.innerHTML = '<div class="alert alert-success" role="alert">	Mensaje enviado con éxito!</div>';
-                        setTimeout(function() { mensaje.innerHTML = "" }, 2500);
+                        setTimeout(function() { mensaje.innerHTML = "" }, 10500);
                         s.to(e._spinner, .5, { opacity: 0 })
                     },
                     error: function(t) { alert('La suscripción se ha realizado con éxito'), s.to(e._spinner, .5, { opacity: 0 }) }

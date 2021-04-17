@@ -903,9 +903,8 @@
                             </div>
 
                         </form>
-                        <div class="footer__newsletter__title" id="mensaje"></div>
-
                     </div>
+                    <div class="footer__newsletter__title" id="mensaje"></div>
                 </div>
 
             </footer>
