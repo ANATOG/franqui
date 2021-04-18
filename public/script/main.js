@@ -3308,7 +3308,7 @@
                     context: this._form,
                     url: config.url + r,
                     success: function(n) {
-                        if (n.data.opcion === 'addRealContacto') { alert("funciono") };
+                        if (n.opcion == 'addRealContacto') { alert("funciono") }
                         i._spinner && s.to(i._spinner, .5, { opacity: 0 }), n.data.status === !1 ? t(n.data.message) : e(n.data.message)
                     },
                     error: function(t) { i._spinner && s.to(i._spinner, .5, { opacity: 0 }), i._wrapperBlock && (i._wrapperBlock.style.visibility = "hidden"), alert("Hubo un error al enviar la información") }
