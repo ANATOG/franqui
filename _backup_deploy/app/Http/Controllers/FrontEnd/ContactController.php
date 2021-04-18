@@ -35,7 +35,7 @@ class ContactController extends Controller
 
         $inputs           = $request->all();
         $validate         = Validator::make($inputs,
-            ['name' => 'required', 'email' => 'required', 'phone' => 'required', 'option' => 'required', 'message_user' => 'required'], $this->messages);
+            ['name' => 'required', 'email' => 'required', 'phone' => 'required', 'option' => 'required', 'message_user' => 'required', 'country'=>'required' ], $this->messages);
         $response['data'] = [];
 
         if ($validate->fails()) {
@@ -73,6 +73,7 @@ class ContactController extends Controller
         $contact->name    = Purify::clean($inputs['name']);
         $contact->email   = Purify::clean($inputs['email']);
         $contact->phone   = Purify::clean($inputs['phone']);
+        $contact->country = Purify::clean($inputs['country']);
         $contact->message = Purify::clean($inputs['message_user']);
         $contact->option  = Purify::clean($inputs['option']);
 
@@ -95,8 +96,8 @@ class ContactController extends Controller
     public function sendEmail($data)
     {
         Mail::send('frontend.emails.contact', $data, function ($message) use ($data) {
-            $message->from('franquiciar@franquiciar.com.ar', 'Franquiciar');
-            $message->to('franquiciar@franquiciar.com.ar');
+            $message->from('anitatorrez1924@gmail.com', 'Franquiciar');
+            $message->to('anitatorrez1924@gmail.com');
             $message->subject('Consulta recibida | Franquiciar.com.ar');
         });
     }

@@ -79,6 +79,10 @@
 									<input type="text" name="phone" placeholder="Teléfono">
 		                            <p class="form__error"></p>                       
 		                        </div>
+								<div class="form_label formlabel_required" data-label="country">
+									<input type="text" name="country" placeholder="País">
+		                            <p class="form__error"></p>
+		                        </div>
 	                        </div>
 							<div class="wrapper-middle__right">
 		                        <div class="form__label form__label__required" data-label="message_user">
