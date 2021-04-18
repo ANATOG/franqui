@@ -880,7 +880,7 @@
 
                 widId = grecaptcha.render('recapchaWidget', {
 
-                    'sitekey':'6Lc7t6waAAAAANVnmjqr5BT7I8x5FZqQjyxPHvVU'
+                    'sitekey':'6LecNq8aAAAAAMc0418UJ41yF6aAdXQy6CnzCDWd'
 
                 });
 

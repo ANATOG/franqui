@@ -1114,7 +1114,7 @@ TU MARCA</p>
                     </div>
 
 
-                    <div class="g-recaptcha" data-sitekey="6Lc7t6waAAAAANVnmjqr5BT7I8x5FZqQjyxPHvVU"></div>
+                    <div class="g-recaptcha" data-sitekey="6LecNq8aAAAAAMc0418UJ41yF6aAdXQy6CnzCDWd"></div>
                       <button id="btn_enviar" name="enviar" class="btEnviar">
                       ENVIAR CONSULTA AHORA
                       </button>

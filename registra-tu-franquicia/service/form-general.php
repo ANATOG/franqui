@@ -13,7 +13,7 @@
 		$captcha=$_POST['g-recaptcha-response'];
 	}
 	/* Validamos con Google */
-	$response=file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=6Le5PhcUAAAAAC_vYEiY7GqB7yRz7kSuK_8vlxXc&response=".$captcha."&remoteip=".$_SERVER['REMOTE_ADDR']);
+	$response=file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=6LecNq8aAAAAAMc0418UJ41yF6aAdXQy6CnzCDWd&response=".$captcha."&remoteip=".$_SERVER['REMOTE_ADDR']);
 
 	/* Enviamos de vuelta las respuestas, si no es humano, envía 0 y si lo es, envía 1.*/
 
