@@ -3924,7 +3924,7 @@
                             document.getElementById('suscripcion').style.display = 'none';
                             document.getElementsByTagName('body')[0].style.opacity = '100';
 
-                        }, 3000);
+                        }, 2000);
                         s.to(e._spinner, .5, { opacity: 0 })
                     }
                 }))

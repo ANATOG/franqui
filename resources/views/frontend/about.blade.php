@@ -11,7 +11,7 @@
                     <iframe width="100%" height="100%" src="https://www.youtube.com/embed/S1YyFF3VnOk?ecver=2" frameborder="0" allowfullscreen></iframe>
 				</div>
 
-				<a class="about__top__button" href="http://franquiciar.com.ar/registra-tu-franquicia/" target="_blank">Registrá tu franquicia <span>&#9658;</span></a>
+				<a class="about__top__button" href="{{ Config::get('app.url') }}registra-tu-franquicia" target="_blank">Registrá tu franquicia <span>&#9658;</span></a>
 			</div>
 		</section>
 
