@@ -4755,7 +4755,7 @@
                         url: "addAdviser",
                         success: function(t) {
                             //e._okMessage.style.visibility = "visible",
-                            mensaje.innerHTML = '<div class="alert alert-success" role="alert">Mensaje con éxito!</div>';
+                            mensaje.innerHTML = '<div class="alert alert-success" role="alert">Mensaje enviado con éxito!</div>';
                             document.getElementById('suscripcion').style.display = 'block';
                             var body = document.getElementsByTagName("body")[0];
                             body.style.position = "static";
