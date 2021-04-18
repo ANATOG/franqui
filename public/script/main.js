@@ -3301,7 +3301,18 @@
                 var i = this,
                     n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "POST",
                     r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this._url;
-                this._spinner && s.to(this._spinner, .5, { opacity: 1 }), o.ajax({ method: n, data: o(this._form).serialize(), dataType: "json", context: this._form, url: config.url + r, success: function(n) { alert("hola mundo"), i._spinner && s.to(i._spinner, .5, { opacity: 0 }), n.data.status === !1 ? t(n.data.message) : e(n.data.message) }, error: function(t) { i._spinner && s.to(i._spinner, .5, { opacity: 0 }), i._wrapperBlock && (i._wrapperBlock.style.visibility = "hidden"), alert("Hubo un error al enviar la información") } })
+                this._spinner && s.to(this._spinner, .5, { opacity: 1 }), o.ajax({
+                    method: n,
+                    data: o(this._form).serialize(),
+                    dataType: "json",
+                    context: this._form,
+                    url: config.url + r,
+                    success: function(n) {
+                        if (n.data.opcion === 'addRealContacto') { alert("funciono") };
+                        i._spinner && s.to(i._spinner, .5, { opacity: 0 }), n.data.status === !1 ? t(n.data.message) : e(n.data.message)
+                    },
+                    error: function(t) { i._spinner && s.to(i._spinner, .5, { opacity: 0 }), i._wrapperBlock && (i._wrapperBlock.style.visibility = "hidden"), alert("Hubo un error al enviar la información") }
+                })
             }
         }]), t
     }();

@@ -44,7 +44,7 @@ class ContactController extends Controller
             return response()->json($response);
 
         } else {
-
+            $response['data']['opcion'] = 'addRealContacto';
             $results = $this->storeContact($inputs);
             if ($results) {
                 $response['data']['status'] = true;
