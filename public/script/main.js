@@ -3907,7 +3907,6 @@
                         var body = document.getElementsByTagName("body")[0];
                         body.style.position = "static";
                         body.style.height = "100%";
-                        //body.style.overflow = "hidden";
                         setTimeout(function() {
                             document.getElementById('suscripcion').style.display = 'none';
                             document.getElementsByTagName('body')[0].style.opacity = '100';
@@ -3921,7 +3920,6 @@
                         var body = document.getElementsByTagName("body")[0];
                         body.style.position = "static";
                         body.style.height = "100%";
-                        body.style.overflow = "hidden";
                         setTimeout(function() {
                             document.getElementById('suscripcion').style.display = 'none';
                             document.getElementsByTagName('body')[0].style.opacity = '100';
@@ -4748,7 +4746,41 @@
                 key: "_sendInfo",
                 value: function(t) {
                     var e = this;
-                    t.preventDefault(), o(this._button).hasClass("js-open-user-login") || this._eventValidateTextArea() && this._validateOptions() && o.ajax({ method: "POST", data: o(this._form).serialize(), dataType: "json", context: this._form, url: "addAdviser", success: function(t) { e._okMessage.style.visibility = "visible", alert("éxito") }, error: function(t) {} })
+                    const mensaje = document.getElementById("mensaje");
+                    t.preventDefault(), o(this._button).hasClass("js-open-user-login") || this._eventValidateTextArea() && this._validateOptions() && o.ajax({
+                        method: "POST",
+                        data: o(this._form).serialize(),
+                        dataType: "json",
+                        context: this._form,
+                        url: "addAdviser",
+                        success: function(t) {
+                            //e._okMessage.style.visibility = "visible",
+                            mensaje.innerHTML = '<div class="alert alert-success" role="alert">Mensaje con éxito!</div>';
+                            document.getElementById('suscripcion').style.display = 'block';
+                            var body = document.getElementsByTagName("body")[0];
+                            body.style.position = "static";
+                            body.style.height = "100%";
+                            //body.style.overflow = "hidden";
+                            setTimeout(function() {
+                                document.getElementById('suscripcion').style.display = 'none';
+                                document.getElementsByTagName('body')[0].style.opacity = '100';
+
+                            }, 2000);
+                        },
+                        error: function(t) {
+                            mensaje.innerHTML = '<div class="alert alert-danger" role="alert">	Ha ocurrido un error!</div>';
+                            document.getElementById('suscripcion').style.display = 'block';
+                            var body = document.getElementsByTagName("body")[0];
+                            body.style.position = "static";
+                            body.style.height = "100%";
+                            setTimeout(function() {
+                                document.getElementById('suscripcion').style.display = 'none';
+                                document.getElementsByTagName('body')[0].style.opacity = '100';
+
+                            }, 3000);
+
+                        }
+                    })
                 }
             }, { key: "_addEventsListeners", value: function() { this._textArea.addEventListener("keyup", this._eventValidateTextArea), this._button.addEventListener("click", this._eventSendInfo); for (var t = 0; t <= this._options.length - 1; t++) this._options[t].addEventListener("click", this._eventSelectOption) } }]), t
         }());
