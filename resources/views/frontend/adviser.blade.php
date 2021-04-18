@@ -15,7 +15,7 @@
 		<form class="adviser__form" method="post" action="{{ Config::get('app.url') }}addAdviser">
 			{{ Form::hidden('_token', csrf_token()) }}
 			<div class="center-wrapper">
-				<h2 class="adviser__title">Solicitá tu asesor</h2>
+				<h2 class="adviser__title">Solicitá tu asesor por favor</h2>
 				<h3 class="adviser__sub-title">Marcá el tipo de asesoramiento que estás buscando y dejanos tu mensaje</h3>
 				
 				<div class="adviser__form__wrapper">
