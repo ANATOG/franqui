@@ -3907,7 +3907,7 @@
                         var body = document.getElementsByTagName("body")[0];
                         body.style.position = "static";
                         body.style.height = "100%";
-                        body.style.overflow = "hidden";
+                        //body.style.overflow = "hidden";
                         setTimeout(function() {
                             document.getElementById('suscripcion').style.display = 'none';
                             document.getElementsByTagName('body')[0].style.opacity = '100';
