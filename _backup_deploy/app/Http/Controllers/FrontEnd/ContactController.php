@@ -37,14 +37,13 @@ class ContactController extends Controller
         $validate         = Validator::make($inputs,
             ['name' => 'required', 'email' => 'required', 'phone' => 'required', 'option' => 'required', 'message_user' => 'required', 'country'=>'required' ], $this->messages);
         $response['data'] = [];
-
+        $response['opcion'] = 'addRealContacto';
         if ($validate->fails()) {
 
             $response['data'] = ['status' => false, 'message' => $validate->errors()];
             return response()->json($response);
 
         } else {
-            $response['opcion'] = 'addRealContacto';
             $results = $this->storeContact($inputs);
             if ($results) {
                 $response['data']['status'] = true;
