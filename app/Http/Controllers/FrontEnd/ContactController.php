@@ -35,8 +35,9 @@ class ContactController extends Controller
 
         $inputs           = $request->all();
         $validate         = Validator::make($inputs,
-            ['name' => 'required', 'email' => 'required', 'phone' => 'required', 'option' => 'required', 'message_user' => 'required'], $this->messages);
+            ['name' => 'required', 'email' => 'required', 'phone' => 'required', 'option' => 'required', 'message_user' => 'required', 'country'=>'required'], $this->messages);
         $response['data'] = [];
+        $response['opcion'] = 'addRealContacto';
 
         if ($validate->fails()) {
 
@@ -73,6 +74,7 @@ class ContactController extends Controller
         $contact->name    = Purify::clean($inputs['name']);
         $contact->email   = Purify::clean($inputs['email']);
         $contact->phone   = Purify::clean($inputs['phone']);
+        $contact->country = Purify::clean($inputs['country']);
         $contact->message = Purify::clean($inputs['message_user']);
         $contact->option  = Purify::clean($inputs['option']);
 
