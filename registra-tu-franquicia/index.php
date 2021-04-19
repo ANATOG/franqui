@@ -1077,7 +1077,7 @@ TU MARCA</p>
 
             <div class="wrapper">
               <h2 class="contact-title">0</h2>
-              <h3 class="contact-subtitle">LLAMANOS O ESCRIBINOSsss!</h3>
+              <h3 class="contact-subtitle">LLAMANOS O ESCRIBINOS!</h3>
                 <div class="contact">
                   <div class="holder">
                     <div class="contact-element">
@@ -1200,6 +1200,7 @@ TU MARCA</p>
 
                           $('#form_1 #loader').fadeOut();
                           $('#form_1 #sent').fadeIn(700,function(){
+                            alert('hola mundo');
                             $('#form_1').animate(700,'easeInOutQuint',function(){
                             });
                           });
