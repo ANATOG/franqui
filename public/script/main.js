@@ -3323,6 +3323,8 @@
                         i._spinner && s.to(i._spinner, .5, { opacity: 0 }), n.data.status === !1 ? t(n.data.message) : e(n.data.message)
                     },
                     error: function(t) {
+                        i._spinner && s.to(i._spinner, .5, { opacity: 0 }), i._wrapperBlock && (i._wrapperBlock.style.visibility = "hidden");
+
                         if (n.opcion === 'addRealContacto') {
                             mensaje.innerHTML = '<div class="alert alert-danger" role="alert">	Ha ocurrido un error!</div>';
                             document.getElementById('suscripcion').style.display = 'block';
@@ -3335,7 +3337,7 @@
 
                             }, 2000);
                         } else {}
-                        i._spinner && s.to(i._spinner, .5, { opacity: 0 }), i._wrapperBlock && (i._wrapperBlock.style.visibility = "hidden"), alert("Hubo un error al enviar la información adfasd")
+                        alert("Hubo un error al enviar la información edson")
                     }
                 })
             }
