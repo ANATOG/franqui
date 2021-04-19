@@ -1093,9 +1093,10 @@ TU MARCA</p>
                 <form id="form_1">
                     <div id="loader"></div>
                     <div id="sent">
-                      <div class="alert alert-success" role="alert">Su mensaje fue enviado correctamente!</div>
-                      <h2 style="margin-bottom:20px"><strong>Muchas gracias por tu contacto. Un asesor se comunicará rápidamente con vos.</strong> </h2>
-
+                      <div class="alert">
+                      <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                      Muchas gracias por tu contacto. Un asesor se comunicará rápidamente con vos.
+                      </div>             
                     </div>
 
 
