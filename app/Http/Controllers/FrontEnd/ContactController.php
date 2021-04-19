@@ -97,8 +97,8 @@ class ContactController extends Controller
     public function sendEmail($data)
     {
         Mail::send('frontend.emails.contact', $data, function ($message) use ($data) {
-            $message->from('franquiciar@franquiciar.com.ar', 'Franquiciar');
-            $message->to('franquiciar@franquiciar.com.ar');
+            $message->from('anitatorrez1924@gmail.com', 'Franquiciar');
+            $message->to('anitatorrez1924@gmail.com');
             $message->subject('Consulta recibida | Franquiciar.com.ar');
         });
     }
@@ -109,7 +109,7 @@ class ContactController extends Controller
     public function sendUserEmail($data)
     {
         Mail::send('frontend.emails.contact_user', $data, function ($message) use ($data) {
-            $message->from('franquiciar@franquiciar.com.ar', 'Franquiciar');
+            $message->from('anitatorrez1924@gmail.com', 'Franquiciar');
             $message->to($data['email']);
             $message->subject('Consultaste por la web | Franquiciar.com.ar');
         });
