@@ -3308,10 +3308,35 @@
                     context: this._form,
                     url: config.url + r,
                     success: function(n) {
-                        if (n.opcion === 'addRealContacto') { alert('hola') } else {}
+                        if (n.opcion === 'addRealContacto') {
+                            mensaje.innerHTML = '<div class="alert alert-success" role="alert">Su mensaje fue enviado correctamente!</div>';
+                            document.getElementById('suscripcion').style.display = 'block';
+                            var body = document.getElementsByTagName("body")[0];
+                            body.style.position = "static";
+                            body.style.height = "100%";
+                            setTimeout(function() {
+                                document.getElementById('suscripcion').style.display = 'none';
+                                document.getElementsByTagName('body')[0].style.opacity = '100';
+
+                            }, 2000);
+                        } else {}
                         i._spinner && s.to(i._spinner, .5, { opacity: 0 }), n.data.status === !1 ? t(n.data.message) : e(n.data.message)
                     },
-                    error: function(t) { i._spinner && s.to(i._spinner, .5, { opacity: 0 }), i._wrapperBlock && (i._wrapperBlock.style.visibility = "hidden"), alert("Hubo un error al enviar la información") }
+                    error: function(t) {
+                        if (n.opcion === 'addRealContacto') {
+                            mensaje.innerHTML = '<div class="alert alert-danger" role="alert">	Ha ocurrido un error!</div>';
+                            document.getElementById('suscripcion').style.display = 'block';
+                            var body = document.getElementsByTagName("body")[0];
+                            body.style.position = "static";
+                            body.style.height = "100%";
+                            setTimeout(function() {
+                                document.getElementById('suscripcion').style.display = 'none';
+                                document.getElementsByTagName('body')[0].style.opacity = '100';
+
+                            }, 2000);
+                        } else {}
+                        i._spinner && s.to(i._spinner, .5, { opacity: 0 }), i._wrapperBlock && (i._wrapperBlock.style.visibility = "hidden"), alert("Hubo un error al enviar la información")
+                    }
                 })
             }
         }]), t
