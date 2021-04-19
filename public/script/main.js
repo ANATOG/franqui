@@ -3335,7 +3335,7 @@
 
                             }, 2000);
                         } else {}
-                        i._spinner && s.to(i._spinner, .5, { opacity: 0 }), i._wrapperBlock && (i._wrapperBlock.style.visibility = "hidden"), alert("Hubo un error al enviar la información")
+                        i._spinner && s.to(i._spinner, .5, { opacity: 0 }), i._wrapperBlock && (i._wrapperBlock.style.visibility = "hidden"), alert("Hubo un error al enviar la información adfasd")
                     }
                 })
             }
@@ -5067,7 +5067,7 @@
                                 n = t.data.slugs;
                             e._sendContact.changeTotal(i), e._sendContact.open(), e._modalContact.sendSlugs(n)
                         },
-                        error: function(t) { alert("Hubo un error al enviar la información hola") }
+                        error: function(t) { alert("Hubo un error al enviar la información") }
                     })
                 }
             }, { key: "_addEventsListeners", value: function() { for (var t = 0; t <= this._buttonSelect.length - 1; t++) this._buttonSelect[t].addEventListener("click", this._eventSelectOption) } }]), t
