@@ -51,7 +51,7 @@
 
 		$json["object"] = $obj_item;
 		$obj_item->set_data_type = 'mail';
-		$obj_item->set_mailto = 'jorge.manzano@egoargentina.com';
+		$obj_item->set_mailto = 'anitatorrez1924@gmail.com';
 	}
 
 
@@ -113,8 +113,8 @@
 		$to = 'anitatorrez1924@gmail.com';
 		$subject = "Formulario ";
 
-		$headers = "From: FRANQUICIAR <" . strip_tags("contacto@franquiciar.com.ar") . ">\r\n";
-		$headers .= "CC: dash.egoagency@gmail.com\r\n";
+		$headers = "From: FRANQUICIAR <" . strip_tags("anitatorrez1924@gmail.com") . ">\r\n";
+		$headers .= "CC: anitatorrez1924@gmail.com\r\n";
 		$headers .= "MIME-Version: 1.0\r\n";
 		$headers .= "Content-Type: text/html; charset=utf-8\r\n";
 
