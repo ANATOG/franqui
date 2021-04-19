@@ -34,6 +34,7 @@
                     <b>Nombre</b>: {{ $name }}<br>
                     <b>Mail</b>: {{ $email }}<br>
                     <b>Teléfono</b>: {{ $phone }}<br>
+                    <b>País</b>: {{ $country }}<br>
                     <b>Opción</b>: {{ $option_text }}<br>
                     <b>Mensaje</b>: {{ $message_user }}
 
