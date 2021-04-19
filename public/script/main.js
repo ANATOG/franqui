@@ -5067,7 +5067,7 @@
                                 n = t.data.slugs;
                             e._sendContact.changeTotal(i), e._sendContact.open(), e._modalContact.sendSlugs(n)
                         },
-                        error: function(t) { alert("Hubo un error al enviar la información") }
+                        error: function(t) { alert("Hubo un error al enviar la información hola") }
                     })
                 }
             }, { key: "_addEventsListeners", value: function() { for (var t = 0; t <= this._buttonSelect.length - 1; t++) this._buttonSelect[t].addEventListener("click", this._eventSelectOption) } }]), t
