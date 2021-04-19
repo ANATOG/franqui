@@ -1094,8 +1094,8 @@ TU MARCA</p>
                     <div id="loader"></div>
                     <div id="sent">
                       <div class="alert">
-                      <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-                      Muchas gracias por tu contacto. Un asesor se comunicará rápidamente con vos.
+                        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                        Muchas gracias por tu contacto. Un asesor se comunicará rápidamente con vos.
                       </div>             
                     </div>
 
@@ -1110,6 +1110,9 @@ TU MARCA</p>
                     <div class="field-full">
                         <input type="text" class="half" name="field_email" placeholder="EMAIL" class="required">
                         <input type="text" class="half" name="field_telefono" placeholder="TELÉFONO" class="required">
+                    </div>
+                    <div class="field-full">
+                        <input type="text" name="field_pais" placeholder="PAÍS" class="required">
                     </div>
                        <div class="field-full">
                         <textarea name="field_consulta" placeholder="Consulta" class="required"></textarea>
