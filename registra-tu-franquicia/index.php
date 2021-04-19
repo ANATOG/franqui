@@ -1093,6 +1093,7 @@ TU MARCA</p>
                 <form id="form_1">
                     <div id="loader"></div>
                     <div id="sent">
+                      <div class="alert alert-success" role="alert">Su mensaje fue enviado correctamente!</div>
                       <h2 style="margin-bottom:20px"><strong>Muchas gracias por tu contacto. Un asesor se comunicará rápidamente con vos.</strong> </h2>
 
                     </div>
@@ -1122,11 +1123,6 @@ TU MARCA</p>
                 </form>
             </div>
         </section>
-        <div class="modal modalContainer" id="suscripcion">
-          <div class="modal-dialog">
-              <div class="footer__newsletter__title" id="mensaje"></div>
-          </div>
-        </div>
         <footer>
             <div class="wrapper">
               <div class="center">
@@ -1205,18 +1201,6 @@ TU MARCA</p>
 
                           $('#form_1 #loader').fadeOut();
                           $('#form_1 #sent').fadeIn(700,function(){
-                            mensaje.innerHTML = '<div class="alert alert-success" role="alert">Su mensaje fue enviado correctamente!</div>';
-                            document.getElementById('suscripcion').style.display = 'block';
-                            var body = document.getElementsByTagName("body")[0];
-                            body.style.position = "static";
-                            body.style.height = "100%";
-                            setTimeout(function() {
-                                document.getElementById('suscripcion').style.display = 'none';
-                                document.getElementsByTagName('body')[0].style.opacity = '100';
-
-                            }, 2000);
-                          }
-                            alert('hola mundo');
                             $('#form_1').animate(700,'easeInOutQuint',function(){
                             });
                           });
