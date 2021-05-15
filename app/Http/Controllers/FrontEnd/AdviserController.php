@@ -94,8 +94,8 @@ class AdviserController extends Controller
         $user         = $this->getLoggedUser();
         $data['user'] = $user;
         Mail::send('frontend.emails.adviser', $data, function ($message) use ($data, $user) {
-            $message->from('anitatorrez1924@gmail.com', 'Franquiciar');
-            $message->to('anitatorrez1924@gmail.com');
+            $message->from('camaleondevs502@gmail.com', 'Franquiciar');
+            $message->to('camaleondevs502@gmail.com');
             $message->subject('Consulta por asesoramiento recibida | Franquiciar.com.ar');
         });
     }
@@ -108,7 +108,7 @@ class AdviserController extends Controller
         $user         = $this->getLoggedUser();
         $data['user'] = $user;
         Mail::send('frontend.emails.adviser_user', $data, function ($message) use ($data, $user) {
-            $message->from('anitatorrez1924@gmail.com', 'Franquiciar');
+            $message->from('camaleondevs502@gmail.com', 'Franquiciar');
             $message->to($user->email);
             $message->subject('Consultaste por asesoramiento | Franquiciar.com.ar');
         });

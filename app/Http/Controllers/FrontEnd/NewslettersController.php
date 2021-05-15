@@ -65,7 +65,7 @@ class NewslettersController extends Controller
     public function sendEmail($data)
     {
         Mail::send('frontend.emails.newsletter', $data, function ($message) use ($data) {
-            $message->from('anitatorrez1924@gmail.com', 'Franquiciar');
+            $message->from('camaleondevs502@gmail.com', 'Franquiciar');
             $message->to($data['email']);
             $message->subject('Suscripción a Newsletter | Franquiciar');
         });
