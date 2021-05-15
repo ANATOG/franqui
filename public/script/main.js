@@ -3307,11 +3307,25 @@
                         dataType: "json",
                         context: this._form,
                         url: config.url + r,
-                        success: function(n) {
+                        success: function(n, t) {
                             i._spinner && s.to(i._spinner, .5, { opacity: 0 }), n.data.status === !1 ? t(n.data.message) : e(n.data.message);
+                            if (n.url == 'perfil') {
+                                window.location = config.url + n.url;
+                            } else if (n.opcion === 'addRealContacto') {
+                                urlactual = 'addRealContacto';
+                                mensaje.innerHTML = '<div class="alert alert-success" role="alert">Su mensaje fue enviado correctamente!</div>';
+                                document.getElementById('suscripcion').style.display = 'block';
+                                var body = document.getElementsByTagName("body")[0];
+                                body.style.position = "static";
+                                body.style.height = "100%";
+                                setTimeout(function() {
+                                    document.getElementById('suscripcion').style.display = 'none';
+                                    document.getElementsByTagName('body')[0].style.opacity = '100';
 
+                                }, 2000);
+                            } else {}
                         },
-                        error: function(t) {
+                        error: function(t, n) {
                             i._spinner && s.to(i._spinner, .5, { opacity: 0 }), i._wrapperBlock && (i._wrapperBlock.style.visibility = "hidden"),
                                 mensaje.innerHTML = '<div class="alert alert-danger" role="alert">	Ha ocurrido un error!</div>';
                             document.getElementById('suscripcion').style.display = 'block';
@@ -3327,6 +3341,7 @@
                     })
                 }
             }]), t
+
         }();
         t.exports = a
     }, function(t, e, i) {
