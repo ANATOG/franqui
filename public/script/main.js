@@ -3328,7 +3328,7 @@
                                             document.getElementById('suscripcion').style.display = 'block';
                                             var body = document.getElementsByTagName("body")[0];
                                             body.style.position = "static";
-                                            9 +
+
                                         },
                                         e.prototype.animateHeight = function() {
                                             var t = this;
