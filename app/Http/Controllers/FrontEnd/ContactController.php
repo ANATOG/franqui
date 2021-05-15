@@ -69,7 +69,6 @@ class ContactController extends Controller
 
         $optionText = ['', 'busco una franquicia', 'quiero anunciar mi marca en franquiciar', 'quiero franquiciar mi negocio', 'otras consultas'];
         $inputs['option_text'] = $optionText[Purify::clean($inputs['option'])];
-        $response['data'] = ['status' => false, 'message' => 'create_error'];
         $contact          = new Contact();
         $contact->name    = Purify::clean($inputs['name']);
         $contact->email   = Purify::clean($inputs['email']);
