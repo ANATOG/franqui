@@ -3307,7 +3307,7 @@
                         dataType: "json",
                         context: this._form,
                         url: config.url + r,
-                        success: function(t) {
+                        success: function(n) {
                             i._spinner && s.to(i._spinner, .5, { opacity: 0 }), n.data.status === !1 ? t(n.data.message) : e(n.data.message);
                             if (n.url == 'perfil') {
                                 window.location = config.url + n.url;
