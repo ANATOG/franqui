@@ -3312,7 +3312,6 @@
                             if (n.url == 'perfil') {
                                 window.location = config.url + n.url;
                             } else if (n.opcion === 'addRealContacto') {
-                                urlactual = 'addRealContacto';
                                 mensaje.innerHTML = '<div class="alert alert-success" role="alert">Su mensaje fue enviado correctamente!</div>';
                                 document.getElementById('suscripcion').style.display = 'block';
                                 var body = document.getElementsByTagName("body")[0];
