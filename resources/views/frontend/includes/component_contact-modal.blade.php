@@ -66,7 +66,7 @@
 							
 							<div class="wrapper-middle__left">
 		                        <div class="form__label form__label__required" data-label="name">
-									<input type="text" name="name" placeholder="Nombre y Apellido" class="required">
+									<input type="text" name="name" placeholder="Nombre y Apellido">
 		                            <p class="form__error"></p>                       
 		                        </div>
 
