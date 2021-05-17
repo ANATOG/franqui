@@ -3303,36 +3303,37 @@
                         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "POST",
                         r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this._url;
                     this._spinner && s.to(this._spinner, .5, { opacity: 1 }), o.ajax({
-                            method: n,
-                            data: o(this._form).serialize(),
-                            dataType: "json",
-                            context: this._form,
-                            url: config.url + r,
-                            success: function(n) {
-                                i._spinner && s.to(i._spinner, .5, { opacity: 0 }), n.data.status === !1 ? t(n.data.message) : e(n.data.message);
-                                if (n.url == 'perfil') {
-                                    window.location = config.url + n.url;
-                                } else if (n.opcion === 'addRealContacto') {
-                                    estadoExito = 1;
-                                } else {}
-                            },
-                            error: function(t) {
-                                estadoExito = 0;
-                                i._spinner && s.to(i._spinner, .5, { opacity: 0 }), i._wrapperBlock && (i._wrapperBlock.style.visibility = "hidden"),
-                                    mensaje.innerHTML = '<div class="alert alert-danger" role="alert">	Ha ocurrido un error!</div>';
-                                document.getElementById('suscripcion').style.display = 'block';
-                                var body = document.getElementsByTagName("body")[0];
-                                body.style.position = "static";
-                                body.style.height = "100%";
-                                setTimeout(function() {
-                                    document.getElementById('suscripcion').style.display = 'none';
-                                    document.getElementsByTagName('body')[0].style.opacity = '100';
+                        method: n,
+                        data: o(this._form).serialize(),
+                        dataType: "json",
+                        context: this._form,
+                        url: config.url + r,
+                        success: function(n) {
+                            i._spinner && s.to(i._spinner, .5, { opacity: 0 }), n.data.status === !1 ? t(n.data.message) : e(n.data.message);
+                            if (n.url == 'perfil') {
+                                window.location = config.url + n.url;
+                            } else if (n.opcion === 'addRealContacto') {
+                                estadoExito = 1;
+                                if (estadoExito === 1) {
+                                    mensaje.innerHTML = '<div class="alert alert-success" role="alert">Su mensaje fue enviado correctamente!</div>';
+                                    document.getElementById('suscripcion').style.display = 'block';
+                                    var body = document.getElementsByTagName("body")[0];
+                                    body.style.position = "static";
+                                    body.style.height = "100%";
+                                    setTimeout(function() {
+                                        document.getElementById('suscripcion').style.display = 'none';
+                                        document.getElementsByTagName('body')[0].style.opacity = '100';
 
-                                }, 2000)
-                            }
-                        })
-                        /*if (estadoExito === 1) {
-                            mensaje.innerHTML = '<div class="alert alert-success" role="alert">Su mensaje fue enviado correctamente!</div>';
+                                    }, 2000);
+                                } else {
+                                    //alert("Llenar campos");
+                                }
+                            } else {}
+                        },
+                        error: function(t) {
+                            estadoExito = 0;
+                            i._spinner && s.to(i._spinner, .5, { opacity: 0 }), i._wrapperBlock && (i._wrapperBlock.style.visibility = "hidden"),
+                                mensaje.innerHTML = '<div class="alert alert-danger" role="alert">	Ha ocurrido un error!</div>';
                             document.getElementById('suscripcion').style.display = 'block';
                             var body = document.getElementsByTagName("body")[0];
                             body.style.position = "static";
@@ -3341,10 +3342,9 @@
                                 document.getElementById('suscripcion').style.display = 'none';
                                 document.getElementsByTagName('body')[0].style.opacity = '100';
 
-                            }, 2000);
-                        } else {
-                            //alert("Llenar campos");
-                        }*/
+                            }, 2000)
+                        }
+                    })
                 }
             }]), t
 
