@@ -3298,8 +3298,8 @@
             }, {
                 key: "sendInfo",
                 value: function(t, e) {
-                    var i = this,
-                        estadoExito = 0,
+                    var i = this;
+                    var estadoExito = 0,
                         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "POST",
                         r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this._url;
                     this._spinner && s.to(this._spinner, .5, { opacity: 1 }), o.ajax({
