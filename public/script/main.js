@@ -3313,16 +3313,6 @@
                             if (n.url == 'perfil') {
                                 window.location = config.url + n.url;
                             } else if (n.opcion === 'addRealContacto') {
-                                /*mensaje.innerHTML = '<div class="alert alert-success" role="alert">Su mensaje fue enviado correctamente!</div>';
-                                document.getElementById('suscripcion').style.display = 'block';
-                                var body = document.getElementsByTagName("body")[0];
-                                body.style.position = "static";
-                                body.style.height = "100%";
-                                setTimeout(function() {
-                                    document.getElementById('suscripcion').style.display = 'none';
-                                    document.getElementsByTagName('body')[0].style.opacity = '100';
-
-                                }, 2000);*/
                                 estadoExito = 1;
                             } else {}
                         },
@@ -3342,9 +3332,18 @@
                         }
                     })
                     if (estadoExito === 1) {
-                        alert("ok");
+                        mensaje.innerHTML = '<div class="alert alert-success" role="alert">Su mensaje fue enviado correctamente!</div>';
+                        document.getElementById('suscripcion').style.display = 'block';
+                        var body = document.getElementsByTagName("body")[0];
+                        body.style.position = "static";
+                        body.style.height = "100%";
+                        setTimeout(function() {
+                            document.getElementById('suscripcion').style.display = 'none';
+                            document.getElementsByTagName('body')[0].style.opacity = '100';
+
+                        }, 2000);
                     } else {
-                        alert("Llenar campos");
+                        //alert("Llenar campos");
                     }
                 }
             }]), t
