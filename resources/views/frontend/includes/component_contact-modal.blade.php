@@ -92,7 +92,7 @@
 							</div>
 						</div>
 
-                       <p class="form__ok">Su mensaje fue enviado correctamente.</p>
+                       <!-- <p class="form__ok">Su mensaje fue enviado correctamente.</p>-->
 
 						<div class="contact-info__wrapper-bottom">
 							<div class="bottom__left">
